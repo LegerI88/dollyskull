@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tattoo Dolly Skull – Scénario Terminale Vente</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0e0c0f;
+  --surface: #161319;
+  --surface2: #1e1a21;
+  --border: #2e2833;
+  --accent: #c9184a;
+  --accent2: #ff6b9d;
+  --gold: #e8a020;
+  --pole1: #c9184a;
+  --pole2: #7b2d8b;
+  --pole3: #1a6b7a;
+  --pole4: #b5621e;
+  --white: #f0ece8;
+  --muted: #7a7080;
+  --light-red: rgba(201,24,74,0.08);
+  --light-purple: rgba(123,45,139,0.08);
+  --light-teal: rgba(26,107,122,0.08);
+  --light-gold: rgba(184,98,30,0.08);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--white);min-height:100vh;font-size:15px;}
+
+/* TEXTURE */
+body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:0.5;}
+
+/* HEADER */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(14,12,15,0.97);border-bottom:1px solid var(--border);backdrop-filter:blur(10px);}
+.header-top{display:flex;align-items:center;gap:20px;padding:14px 28px;border-bottom:2px solid var(--accent);}
+.logo-zone{display:flex;align-items:center;gap:14px;}
+.skull-icon{font-size:2rem;line-height:1;}
+.logo-text{display:flex;flex-direction:column;}
+.logo-main{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:3px;color:var(--accent);line-height:1;}
+.logo-sub{font-family:'Oswald',sans-serif;font-size:0.7rem;font-weight:400;letter-spacing:4px;color:var(--muted);text-transform:uppercase;margin-top:2px;}
+.header-info{margin-left:auto;text-align:right;}
+.header-info h1{font-family:'Oswald',sans-serif;font-size:0.95rem;font-weight:500;color:var(--white);letter-spacing:1px;}
+.header-info p{font-size:0.75rem;color:var(--muted);margin-top:3px;letter-spacing:0.5px;}
+.header-actions{display:flex;gap:8px;padding:8px 28px;background:#0a090c;}
+.btn-action{font-family:'Oswald',sans-serif;padding:6px 16px;border-radius:2px;border:none;cursor:pointer;font-size:0.8rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;transition:all .2s;}
+.btn-print{background:#2a252e;color:var(--white);border:1px solid var(--border);}
+.btn-print:hover{background:#352e3a;}
+.btn-pdf{background:var(--accent);color:white;}
+.btn-pdf:hover{background:#e02a5a;}
+
+/* NAV */
+.nav-bar{background:#0a090c;display:flex;gap:2px;padding:0 28px;overflow-x:auto;border-bottom:1px solid var(--border);}
+.nav-btn{background:none;border:none;border-bottom:3px solid transparent;color:var(--muted);cursor:pointer;font-family:'Oswald',sans-serif;font-size:0.82rem;font-weight:500;letter-spacing:1.5px;padding:12px 16px;white-space:nowrap;transition:all .2s;text-transform:uppercase;}
+.nav-btn:hover{color:var(--white);}
+.nav-btn.active{color:var(--white);}
+.nav-btn.p0.active{border-bottom-color:var(--accent);}
+.nav-btn.p1.active{border-bottom-color:var(--pole1);}
+.nav-btn.p2.active{border-bottom-color:var(--pole2);}
+.nav-btn.p3.active{border-bottom-color:var(--pole3);}
+.nav-btn.p4.active{border-bottom-color:var(--pole4);}
+
+/* MAIN */
+.main{max-width:1060px;margin:0 auto;padding:28px 18px 60px;position:relative;z-index:1;}
+.section{display:none;}
+.section.active{display:block;}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1fr 1fr;border-radius:8px;overflow:hidden;margin-bottom:28px;border:1px solid var(--border);}
+.hero-left{background:linear-gradient(135deg,#1a0f1e,#0e0c0f);padding:36px 38px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+.hero-left::before{content:'☠';position:absolute;right:-20px;bottom:-30px;font-size:12rem;opacity:0.04;line-height:1;}
+.hero-eyebrow{font-family:'Oswald',sans-serif;font-size:0.72rem;font-weight:400;letter-spacing:4px;color:var(--accent);text-transform:uppercase;margin-bottom:10px;}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:3rem;letter-spacing:3px;color:var(--white);line-height:1.05;margin-bottom:6px;}
+.hero-title span{color:var(--accent);}
+.hero-desc{font-size:0.88rem;color:var(--muted);line-height:1.75;margin-top:10px;max-width:380px;}
+.hero-right{background:#12101a;padding:28px;display:flex;flex-direction:column;gap:12px;justify-content:center;}
+.stat-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:6px;padding:14px 18px;display:flex;align-items:center;gap:14px;}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;line-height:1;color:var(--accent);}
+.stat-label{font-family:'Oswald',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:2px;color:var(--muted);text-transform:uppercase;line-height:1.4;}
+
+/* INFO CARDS */
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-bottom:24px;}
+.info-card{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:18px;border-left:3px solid var(--accent);}
+.info-card.purple{border-left-color:var(--pole2);}
+.info-card.teal{border-left-color:var(--pole3);}
+.info-card.gold{border-left-color:var(--gold);}
+.info-card h3{font-family:'Oswald',sans-serif;font-size:0.72rem;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+.info-card p,.info-card li{font-size:0.86rem;line-height:1.8;color:#c0b8c8;}
+.info-card ul{padding-left:16px;}
+
+/* POLES OVERVIEW */
+.poles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:24px;}
+.pole-card{border-radius:6px;padding:20px 22px;border:1px solid var(--border);position:relative;overflow:hidden;}
+.pole-card.p1{background:linear-gradient(135deg,rgba(201,24,74,0.12),rgba(201,24,74,0.04));border-color:rgba(201,24,74,0.25);}
+.pole-card.p2{background:linear-gradient(135deg,rgba(123,45,139,0.12),rgba(123,45,139,0.04));border-color:rgba(123,45,139,0.25);}
+.pole-card.p3{background:linear-gradient(135deg,rgba(26,107,122,0.12),rgba(26,107,122,0.04));border-color:rgba(26,107,122,0.25);}
+.pole-card.p4{background:linear-gradient(135deg,rgba(181,98,30,0.12),rgba(181,98,30,0.04));border-color:rgba(181,98,30,0.25);}
+.pole-card .pnum{font-family:'Bebas Neue',sans-serif;font-size:5rem;position:absolute;right:10px;top:-10px;opacity:0.07;line-height:1;}
+.pole-card h3{font-family:'Oswald',sans-serif;font-size:0.95rem;font-weight:600;letter-spacing:1px;margin-bottom:10px;text-transform:uppercase;}
+.pole-card.p1 h3{color:var(--pole1);}
+.pole-card.p2 h3{color:#b06ac0;}
+.pole-card.p3 h3{color:#3ab8cc;}
+.pole-card.p4 h3{color:#d4894e;}
+.pole-card ul{padding-left:16px;font-size:0.82rem;color:var(--muted);line-height:2;}
+
+/* POLE HEADER */
+.pole-header{display:flex;align-items:center;gap:18px;padding:22px 26px;border-radius:8px;margin-bottom:22px;border:1px solid var(--border);background:var(--surface);}
+.pole-header.p1{border-left:5px solid var(--pole1);}
+.pole-header.p2{border-left:5px solid var(--pole2);}
+.pole-header.p3{border-left:5px solid var(--pole3);}
+.pole-header.p4{border-left:5px solid var(--pole4);}
+.pole-big-num{font-family:'Bebas Neue',sans-serif;font-size:4rem;line-height:1;opacity:0.1;}
+.p1 .pole-big-num{color:var(--pole1);}
+.p2 .pole-big-num{color:var(--pole2);}
+.p3 .pole-big-num{color:var(--pole3);}
+.p4 .pole-big-num{color:var(--pole4);}
+.pole-header h2{font-family:'Oswald',sans-serif;font-size:1.2rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+.pole-header p{font-size:0.83rem;color:var(--muted);margin-top:4px;line-height:1.6;}
+
+/* MISSION */
+.mission{background:var(--surface);border:1px solid var(--border);border-radius:8px;margin-bottom:14px;overflow:hidden;}
+.mission-header{display:flex;align-items:center;gap:14px;padding:16px 20px;cursor:pointer;transition:opacity .2s;user-select:none;}
+.mission-header:hover{opacity:.9;}
+.p1 .mission-header{background:linear-gradient(90deg,rgba(201,24,74,0.18),rgba(201,24,74,0.06));}
+.p2 .mission-header{background:linear-gradient(90deg,rgba(123,45,139,0.18),rgba(123,45,139,0.06));}
+.p3 .mission-header{background:linear-gradient(90deg,rgba(26,107,122,0.18),rgba(26,107,122,0.06));}
+.p4 .mission-header{background:linear-gradient(90deg,rgba(181,98,30,0.18),rgba(181,98,30,0.06));}
+.mission-num{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;line-height:1;opacity:.5;min-width:32px;}
+.p1 .mission-num{color:var(--pole1);}
+.p2 .mission-num{color:var(--pole2);}
+.p3 .mission-num{color:var(--pole3);}
+.p4 .mission-num{color:var(--pole4);}
+.mission-header h3{font-family:'Oswald',sans-serif;font-size:1rem;font-weight:600;letter-spacing:.5px;flex:1;}
+.mission-header .msub{font-size:.77rem;color:var(--muted);margin-top:2px;letter-spacing:.3px;}
+.mission-tag{font-family:'Oswald',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:2px;white-space:nowrap;}
+.p1 .mission-tag{background:rgba(201,24,74,.2);color:#ff6b9d;border:1px solid rgba(201,24,74,.3);}
+.p2 .mission-tag{background:rgba(123,45,139,.2);color:#c080d0;border:1px solid rgba(123,45,139,.3);}
+.p3 .mission-tag{background:rgba(26,107,122,.2);color:#5acfdf;border:1px solid rgba(26,107,122,.3);}
+.p4 .mission-tag{background:rgba(181,98,30,.2);color:#e09060;border:1px solid rgba(181,98,30,.3);}
+.toggle-icon{font-size:.85rem;color:var(--muted);transition:transform .3s;}
+.mission.open .toggle-icon{transform:rotate(180deg);}
+.mission-body{display:none;padding:22px;border-top:1px solid var(--border);flex-direction:column;gap:18px;}
+.mission.open .mission-body{display:flex;}
+
+/* BLOCKS */
+.block-label{font-family:'Oswald',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:3px;text-transform:uppercase;padding:4px 12px;border-radius:2px;display:inline-block;margin-bottom:8px;}
+.block-label.ctx{background:rgba(232,160,32,.1);color:var(--gold);border:1px solid rgba(232,160,32,.2);}
+.block-label.tsk{background:rgba(99,179,237,.1);color:#63b3ed;border:1px solid rgba(99,179,237,.2);}
+.block-label.res{background:rgba(72,187,120,.1);color:#48bb78;border:1px solid rgba(72,187,120,.2);}
+.block-label.ann{background:rgba(183,148,244,.1);color:#b794f4;border:1px solid rgba(183,148,244,.2);}
+.block-label.auto{background:rgba(252,129,74,.1);color:#fc814a;border:1px solid rgba(252,129,74,.2);}
+
+.ctx-box{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:16px 20px;font-size:.88rem;line-height:1.78;color:#c0b8c8;}
+.bubble{background:rgba(255,255,255,.04);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;padding:10px 16px;margin:10px 0;font-style:italic;font-size:.87rem;color:#d4ccc0;}
+.bubble.insta{border-left-color:var(--pole2);}
+.bubble.client{border-left-color:var(--pole3);}
+
+.task-list{list-style:none;display:flex;flex-direction:column;gap:6px;}
+.task-list li{background:rgba(99,179,237,.05);border-left:3px solid rgba(99,179,237,.4);border-radius:0 6px 6px 0;padding:10px 14px;font-size:.87rem;line-height:1.65;color:#c0b8c8;}
+.task-list li strong{color:var(--white);}
+
+.resp{min-height:56px;background:rgba(255,255,255,.03);border:1.5px dashed rgba(232,160,32,.4);border-radius:5px;padding:8px 12px;font-size:.87rem;color:var(--white);outline:none;margin:4px 0 8px;transition:all .2s;}
+.resp:focus{background:rgba(232,160,32,.05);border-color:var(--gold);}
+.resp:empty::before{content:attr(data-placeholder);color:#4a4050;font-style:italic;font-size:.82rem;pointer-events:none;}
+
+.res-box{background:rgba(72,187,120,.04);border:1px solid rgba(72,187,120,.15);border-radius:6px;padding:14px 18px;margin-top:6px;}
+.res-title{font-family:'Oswald',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#48bb78;margin-bottom:8px;}
+.res-box ul{padding-left:18px;font-size:.86rem;line-height:1.9;color:#c0b8c8;}
+
+/* ANNEXES */
+.ann-box{background:rgba(183,148,244,.04);border:1px solid rgba(183,148,244,.15);border-radius:6px;padding:18px;}
+.ann-title{font-family:'Oswald',sans-serif;font-size:.75rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#b794f4;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid rgba(183,148,244,.15);}
+table.ann-table{width:100%;border-collapse:collapse;font-size:.85rem;}
+.ann-table th{background:#0a090c;color:var(--white);padding:9px 12px;text-align:left;font-family:'Oswald',sans-serif;font-size:.78rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;}
+.ann-table td{padding:8px 12px;border:1px solid var(--border);color:#c0b8c8;vertical-align:top;line-height:1.5;}
+.ann-table tr:nth-child(even) td{background:rgba(255,255,255,.02);}
+.editable{background:rgba(232,160,32,.04) !important;border:1.5px dashed rgba(232,160,32,.35) !important;border-radius:3px;outline:none;padding:6px 10px !important;cursor:text;}
+.editable:focus{background:rgba(232,160,32,.08) !important;border-color:var(--gold) !important;}
+.editable:empty::before{content:attr(data-placeholder);color:#3a3040;font-style:italic;font-size:.8rem;pointer-events:none;}
+
+/* AUTOEVAL */
+table.ae-table{width:100%;border-collapse:collapse;font-size:.85rem;}
+.ae-table th{background:#0a090c;color:var(--white);padding:9px 12px;font-family:'Oswald',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;text-align:center;}
+.ae-table th:first-child{text-align:left;}
+.ae-table td{padding:9px 12px;border:1px solid var(--border);color:#c0b8c8;vertical-align:middle;}
+.ae-table tr:nth-child(even) td{background:rgba(255,255,255,.02);}
+.chk-col{width:72px;text-align:center;}
+.chk-cell{display:flex;justify-content:center;}
+.chk-btn{width:28px;height:28px;border-radius:50%;border:2px solid var(--border);background:transparent;cursor:pointer;font-size:.7rem;font-weight:700;color:var(--muted);transition:all .2s;}
+.chk-btn.oui{background:#22c55e;border-color:#16a34a;color:white;}
+.chk-btn.part{background:var(--gold);border-color:#d4860a;color:#0e0c0f;}
+.chk-btn.non{background:#ef4444;border-color:#dc2626;color:white;}
+.ae-legend{display:flex;gap:14px;margin-top:8px;justify-content:flex-end;font-size:.78rem;color:var(--muted);}
+.ae-dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;}
+.ae-dot.oui{background:#22c55e;}
+.ae-dot.part{background:var(--gold);}
+.ae-dot.non{background:#ef4444;}
+
+.disclaimer{background:rgba(232,160,32,.06);border:1px solid rgba(232,160,32,.2);border-radius:6px;padding:14px 18px;font-size:.8rem;color:#c0b0a0;line-height:1.7;margin-top:20px;}
+
+@media print{
+  .site-header,.nav-bar{display:none!important;}
+  .section{display:block!important;}
+  .mission-body{display:flex!important;}
+  .resp,.editable{border:1px dashed #555!important;min-height:36px;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <div class="logo-zone">
+      <div class="skull-icon">☠️</div>
+      <div class="logo-text">
+        <div class="logo-main">Tattoo Dolly Skull</div>
+        <div class="logo-sub">Scénario pédagogique · Terminale Bac Pro Vente</div>
+      </div>
+    </div>
+    <div class="header-info">
+      <h1>Lycée Isabelle Viviani · Épinal</h1>
+      <p>Patronne : Fidji · Apprentie : Bobbytattoo</p>
+    </div>
+  </div>
+  <div class="header-actions">
+    <button class="btn-action btn-print" onclick="window.print()">🖨️ Imprimer</button>
+    <button class="btn-action btn-pdf" onclick="window.print()">💾 PDF</button>
+  </div>
+  <nav class="nav-bar">
+    <button class="nav-btn p0 active" onclick="show('accueil',this)">☠ le shop</button>
+    <button class="nav-btn p1" onclick="show('pole1',this)">Pôle 1 – Communication digitale</button>
+    <button class="nav-btn p2" onclick="show('pole2',this)">Pôle 2 – Prospection</button>
+    <button class="nav-btn p3" onclick="show('pole3',this)">Pôle 3 – Vente & conseil</button>
+    <button class="nav-btn p4" onclick="show('pole4',this)">Pôle 4 – Éco-Droit</button>
+  </nav>
+</header>
+
+<div class="main">
+
+<!-- ===== PAGE ACCUEIL ===== -->
+<div class="section active" id="accueil">
+  <div class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Scénario pédagogique · Terminale Bac Pro Vente</div>
+      <div class="hero-title">Tattoo<br><span>Dolly Skull</span></div>
+      <div class="hero-desc">Tu es l'assistante commerciale de <strong>Bobbytattoo</strong>, jeune tatoueuse en apprentissage au shop <strong>Tattoo Dolly Skull</strong>. Ta mission : l'aider à se faire connaître, développer sa clientèle et professionnaliser son activité. La patronne <strong>Fidji</strong> t'encadre au quotidien.</div>
+    </div>
+    <div class="hero-right">
+      <div class="stat-card"><div class="stat-num">4</div><div class="stat-label">Pôles de<br>compétences</div></div>
+      <div class="stat-card"><div class="stat-num">12</div><div class="stat-label">Missions à<br>accomplir</div></div>
+      <div class="stat-card"><div class="stat-num">Tle</div><div class="stat-label">Bac Pro<br>Vente</div></div>
+    </div>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <h3>🏚️ le shop</h3>
+      <ul>
+        <li>Tattoo Dolly Skull – Éloyes (88)</li>
+        <li>Shop de tatouage indépendant</li>
+        <li>Ambiance dark, artistique, bienveillante</li>
+        <li>Clientèle : 18-40 ans, passionnés d'art</li>
+      </ul>
+    </div>
+    <div class="info-card purple">
+      <h3>🎨 Bobbytattoo</h3>
+      <ul>
+        <li>Jeune tatoueuse en apprentissage</li>
+        <li>Style : blackwork, dotwork, mandala, fine line, minimaliste, linework</li>
+        <li>Instagram : <strong>@bobbytattoo</strong></li>
+        <li>Objectif : développer sa notoriété</li>
+      </ul>
+    </div>
+    <div class="info-card teal">
+      <h3>💀 Fidji – Patronne</h3>
+      <ul>
+        <li>Tatoueuse professionnelle depuis 12 ans</li>
+        <li>Elle supervise ton travail commercial</li>
+        <li>Exigeante mais bienveillante</li>
+        <li>Valide chaque action avant diffusion</li>
+      </ul>
+    </div>
+    <div class="info-card gold">
+      <h3>📋 Informations pratiques</h3>
+      <ul>
+        <li>Tarif tatouage : à partir de 80€/h</li>
+        <li>Flash tattoo : 50–150€ pièce</li>
+        <li>Consultation gratuite sur RDV</li>
+        <li>Paiement : CB, espèces, virement</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="poles-grid">
+    <div class="pole-card p1"><div class="pnum">01</div>
+      <h3>📱 Communication digitale & réseaux</h3>
+      <ul>
+        <li>M1.1 – Créer le profil Instagram de Bobbytattoo</li>
+        <li>M1.2 – Rédiger des posts engageants</li>
+        <li>M1.3 – Gérer un commentaire négatif en ligne</li>
+      </ul>
+    </div>
+    <div class="pole-card p2"><div class="pnum">02</div>
+      <h3>🎯 Prospection & développement clientèle</h3>
+      <ul>
+        <li>M2.1 – Identifier et cibler les prospects</li>
+        <li>M2.2 – Créer une offre de lancement flash</li>
+        <li>M2.3 – Partenariat avec une enseigne locale</li>
+      </ul>
+    </div>
+    <div class="pole-card p3"><div class="pnum">03</div>
+      <h3>🤝 Vente & conseil client</h3>
+      <ul>
+        <li>M3.1 – Accueillir et conseiller un primo-tatoueur</li>
+        <li>M3.2 – Présenter un devis et négocier</li>
+        <li>M3.3 – Gérer un client indécis sur le motif</li>
+      </ul>
+    </div>
+    <div class="pole-card p4"><div class="pnum">04</div>
+      <h3>⚖️ Éco-Droit · Hygiène & Réglementation</h3>
+      <ul>
+        <li>M4.1 – Les règles d'hygiène obligatoires</li>
+        <li>M4.2 – Le contrat et le consentement éclairé</li>
+        <li>M4.3 – Statut juridique & obligations légales</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="disclaimer">⚠️ <strong>Note pédagogique :</strong> Ce scénario est entièrement fictif à des fins pédagogiques. le shop "Tattoo Dolly Skull", les personnages Bobbytattoo et Fidji, les situations et tarifs présentés sont inventés. Toute ressemblance avec des personnes ou établissements réels serait fortuite. Le tatouage est réservé aux personnes majeures (18 ans et plus) – cette règle légale est rappelée dans les missions Éco-Droit.</div>
+</div>
+
+<!-- ===== PÔLE 1 – COMMUNICATION DIGITALE ===== -->
+<div class="section" id="pole1">
+  <div class="pole-header p1">
+    <div class="pole-big-num">01</div>
+    <div>
+      <h2>Pôle 1 – Communication digitale & réseaux sociaux</h2>
+      <p>Compétences travaillées : créer une identité digitale cohérente, rédiger des contenus engageants adaptés à la cible, gérer l'e-réputation, utiliser les outils numériques à des fins commerciales.</p>
+    </div>
+  </div>
+
+  <!-- M1.1 -->
+  <div class="mission p1">
+    <div class="mission-header" onclick="tog(this)">
+      <span class="mission-num">M1</span>
+      <div><h3>On existe sur Instagram ! – Créer le profil pro de Bobbytattoo</h3><div class="msub">Identité digitale · Bio · Ligne éditoriale · Canva</div></div>
+      <span class="mission-tag">Instagram</span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="mission-body">
+      <div><div class="block-label ctx">🟡 Contexte</div>
+        <div class="ctx-box">
+          <p>Bobbytattoo a ouvert son compte Instagram il y a 3 mois mais il ressemble à un compte personnel : pas de bio professionnelle, photo de profil floue, publications irrégulières. Fidji est directe :</p>
+          <div class="bubble">"Bobby, si tu veux des clients, ton Insta doit être impeccable. Les gens jugent en 3 secondes. Je te laisse une semaine pour le refaire de zéro – demande à ton assistante commerciale de t'aider."</div>
+          <p style="margin-top:10px;">C'est là que tu interviens. Bobbytattoo te dit :</p>
+          <div class="bubble insta">"Je sais tatouer mais les réseaux c'est pas mon truc... Aide-moi à créer quelque chose de pro mais qui me ressemble vraiment – dark, artistique, pas corporate."</div>
+        </div>
+      </div>
+      <div><div class="block-label tsk">🔵 Tes tâches</div>
+        <ol class="task-list">
+          <li><strong>Tâche 1 :</strong> Rédige la <strong>bio Instagram professionnelle</strong> de Bobbytattoo (150 caractères max). Elle doit inclure : son style, sa localisation, un appel à l'action et un emoji pertinent.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Ma bio Instagram (150 caractères max) : ..."></div>
+          <li><strong>Tâche 2 :</strong> Définis la <strong>ligne éditoriale</strong> du compte : 3 types de contenus à publier régulièrement avec la fréquence recommandée pour chacun.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Contenu 1 : ... (fréquence : ...) / Contenu 2 : ... / Contenu 3 : ..."></div>
+          <li><strong>Tâche 3 :</strong> Propose un <strong>nom de compte</strong> professionnel cohérent avec l'identité de Bobbytattoo et explique ton choix.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Nom de compte proposé : @... / Justification : ..."></div>
+          <li><strong>Tâche 4 :</strong> Sur Canva, crée une <strong>bannière de profil</strong> (format recommandé : 1080×1080px) représentant l'univers de Bobbytattoo. Dépose-la sur ton Digipad personnel avec le titre "Bannière Bobbytattoo – [Ton prénom]".</li>
+          <li><strong>Tâche 5 :</strong> Complète l'annexe A1 – Fiche identité digitale.</li>
+        </ol>
+      </div>
+      <div><div class="block-label res">🟢 Ressources</div>
+        <div class="res-box">
+          <div class="res-title">📱 Ressource 1 – Les éléments clés d'un profil Instagram pro</div>
+          <ul>
+            <li><strong>Photo de profil :</strong> logo ou portrait professionnel, carré, reconnaissable en miniature</li>
+            <li><strong>Nom de compte :</strong> simple, mémorisable, cohérent avec le prénom ou pseudo artiste</li>
+            <li><strong>Bio :</strong> qui tu es + ce que tu proposes + où + appel à l'action (RDV, lien, DM)</li>
+            <li><strong>Lien en bio :</strong> Linktree, site, ou lien de prise de RDV</li>
+            <li><strong>Fréquence recommandée :</strong> 3-4 posts/semaine + stories quotidiennes pour rester visible</li>
+            <li><strong>Cohérence visuelle :</strong> palette de couleurs, filtre unique, style d'écriture constant</li>
+          </ul>
+        </div>
+      </div>
+      <div><div class="block-label ann">🟣 Annexe A1 – Fiche identité digitale Bobbytattoo</div>
+        <div class="ann-box">
+          <div class="ann-title">Annexe A1 – À compléter</div>
+          <table class="ann-table">
+            <tr><td style="width:35%"><strong>Nom de compte Instagram</strong></td><td class="editable" contenteditable="true" data-placeholder="@..."></td></tr>
+            <tr><td><strong>Bio rédigée (150 car. max)</strong></td><td class="editable" contenteditable="true" data-placeholder="..."></td></tr>
+            <tr><td><strong>Style artistique mis en avant</strong></td><td class="editable" contenteditable="true" data-placeholder="Blackwork / Dotwork / Mandala / ..."></td></tr>
+            <tr><td><strong>Palette de couleurs choisie</strong></td><td class="editable" contenteditable="true" data-placeholder="Ex : noir, rouge bordeaux, blanc cassé..."></td></tr>
+            <tr><td><strong>Fréquence de publication</strong></td><td class="editable" contenteditable="true" data-placeholder="... posts/semaine + ... stories/jour"></td></tr>
+            <tr><td><strong>Appel à l'action en bio</strong></td><td class="editable" contenteditable="true" data-placeholder="Ex : RDV en DM / Lien en bio / ..."></td></tr>
+            <tr><td><strong>Bannière déposée sur Digipad ?</strong></td><td class="editable" contenteditable="true" data-placeholder="Oui / Non – titre du fichier : ..."></td></tr>
+          </table>
+        </div>
+      </div>
+      <div><div class="block-label auto">🔴 Autoévaluation</div>
+        <table class="ae-table">
+          <thead><tr><th>Critère</th><th class="chk-col">✅ Oui</th><th class="chk-col">⚠️ Part.</th><th class="chk-col">❌ Non</th></tr></thead>
+          <tbody>
+            <tr><td>La bio est professionnelle, complète et sous 150 caractères</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>La ligne éditoriale comporte 3 types de contenus avec fréquences</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Le nom de compte est justifié et professionnel</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>La bannière Canva est créée et déposée sur le Digipad personnel</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>L'annexe A1 est complétée entièrement</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+          </tbody>
+        </table>
+        <div class="ae-legend"><span><span class="ae-dot oui"></span>Oui</span><span><span class="ae-dot part"></span>Partiellement</span><span><span class="ae-dot non"></span>Non</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- M1.2 -->
+  <div class="mission p1">
+    <div class="mission-header" onclick="tog(this)">
+      <span class="mission-num">M2</span>
+      <div><h3>Poste et engage ! – Rédiger des contenus Instagram</h3><div class="msub">Copywriting · Hashtags · Storytelling · Engagement</div></div>
+      <span class="mission-tag">Content</span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="mission-body">
+      <div><div class="block-label ctx">🟡 Contexte</div>
+        <div class="ctx-box">
+          <p>Le profil Instagram est prêt. Il faut maintenant alimenter le compte avec des posts qui donnent envie. Fidji t'explique :</p>
+          <div class="bubble">"Sur Instagram, une belle photo ça attire – mais c'est le texte qui convainc. Tes posts doivent raconter une histoire, montrer le savoir-faire de Bobby, et pousser les gens à prendre RDV."</div>
+          <p style="margin-top:10px;">Bobbytattoo vient de terminer 3 tatouages cette semaine : un mandala sur avant-bras, un blackwork lune sur cheville, et un flash chat avec des roses. Elle veut les poster.</p>
+        </div>
+      </div>
+      <div><div class="block-label tsk">🔵 Tes tâches</div>
+        <ol class="task-list">
+          <li><strong>Tâche 1 :</strong> Rédige le <strong>texte complet du post Instagram</strong> pour le mandala sur avant-bras. Maximum 200 mots : accroche, description, storytelling, appel à l'action + hashtags.</li>
+          <div class="resp" contenteditable="true" style="min-height:90px;" data-placeholder="✏️ Mon post Instagram mandala : accroche / description / storytelling / CTA / #hashtags..."></div>
+          <li><strong>Tâche 2 :</strong> Pour le flash chat-roses, rédige une <strong>légende courte style "caption Instagram"</strong> (50 mots max) + 10 hashtags pertinents.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Caption courte + #hashtags..."></div>
+          <li><strong>Tâche 3 :</strong> Propose <strong>3 idées de stories</strong> à publier cette semaine pour montrer les coulisses du shop. Format : titre + format (sondage / question / vidéo / photo).</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Story 1 : ... (format : ...) / Story 2 : ... / Story 3 : ..."></div>
+          <li><strong>Tâche 4 :</strong> Explique en 3 phrases pourquoi les <strong>hashtags sont essentiels</strong> pour la visibilité d'un compte de tatoueur et comment les choisir efficacement.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Mon explication sur les hashtags..."></div>
+        </ol>
+      </div>
+      <div><div class="block-label res">🟢 Ressources</div>
+        <div class="res-box">
+          <div class="res-title">✍️ Ressource 2 – Structure d'un post Instagram efficace</div>
+          <ul>
+            <li><strong>Accroche (ligne 1) :</strong> phrase qui stoppe le scroll – question, chiffre, affirmation forte</li>
+            <li><strong>Corps :</strong> histoire courte, émotion, contexte du tatouage (inspiration, durée, style)</li>
+            <li><strong>Appel à l'action (CTA) :</strong> "RDV en DM", "Lien en bio", "Sauvegarde ce post !", "Tague quelqu'un qui adorerait ça"</li>
+            <li><strong>Hashtags :</strong> 5-10 ciblés valent mieux que 30 génériques. Mix entre niche (#blackworktattoo) et local (#tatoueuréloyes)</li>
+            <li><strong>Fréquence :</strong> régularité > quantité. 3 posts/semaine bien construits battent 7 posts bâclés</li>
+          </ul>
+        </div>
+      </div>
+      <div><div class="block-label auto">🔴 Autoévaluation</div>
+        <table class="ae-table">
+          <thead><tr><th>Critère</th><th class="chk-col">✅ Oui</th><th class="chk-col">⚠️ Part.</th><th class="chk-col">❌ Non</th></tr></thead>
+          <tbody>
+            <tr><td>Le post mandala a une accroche, un corps, un CTA et des hashtags</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>La caption flash est sous 50 mots avec 10 hashtags pertinents</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Les 3 idées de stories sont variées (formats différents)</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>L'explication sur les hashtags est juste et argumentée</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+          </tbody>
+        </table>
+        <div class="ae-legend"><span><span class="ae-dot oui"></span>Oui</span><span><span class="ae-dot part"></span>Partiellement</span><span><span class="ae-dot non"></span>Non</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- M1.3 -->
+  <div class="mission p1">
+    <div class="mission-header" onclick="tog(this)">
+      <span class="mission-num">M3</span>
+      <div><h3>Commentaire toxique ! – Gérer l'e-réputation</h3><div class="msub">E-réputation · Gestion de crise · Réponse professionnelle</div></div>
+      <span class="mission-tag">E-réputation</span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="mission-body">
+      <div><div class="block-label ctx">🟡 Contexte</div>
+        <div class="ctx-box">
+          <p>Ce matin, Bobbytattoo t'envoie un message paniqué :</p>
+          <div class="bubble insta">"Regarde le commentaire sur mon dernier post ! Une fille a écrit : 'Bof le trait est pas net, j'aurais pas confiance pour me faire tatouer par quelqu'un d'aussi peu expérimenté.' Et 3 personnes ont liké. Je veux supprimer !"</div>
+          <p style="margin-top:10px;">Fidji intervient avant que Bobby ne réagisse à chaud :</p>
+          <div class="bubble">"On ne supprime JAMAIS un commentaire négatif non injurieux – ça se voit et ça empire tout. On répond. Avec la tête, pas le cœur. Ton rôle c'est de rédiger la réponse."</div>
+        </div>
+      </div>
+      <div><div class="block-label tsk">🔵 Tes tâches</div>
+        <ol class="task-list">
+          <li><strong>Tâche 1 :</strong> Explique à Bobbytattoo <strong>pourquoi supprimer le commentaire serait une erreur</strong> commerciale. Cite 2 conséquences concrètes.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Conséquence 1 : ... / Conséquence 2 : ..."></div>
+          <li><strong>Tâche 2 :</strong> Rédige la <strong>réponse professionnelle au commentaire</strong> (Annexe A2). Ton : calme, confiant, sans agressivité. Maximum 80 mots.</li>
+          <li><strong>Tâche 3 :</strong> Propose <strong>2 actions proactives</strong> à lancer dans les 48h pour "noyer" ce commentaire positivement (nouveaux posts, demande d'avis à des clients satisfaits…).</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Action 1 : ... / Action 2 : ..."></div>
+          <li><strong>Tâche 4 :</strong> Rédige la <strong>réponse à un avis 5 étoiles</strong> d'un client qui a écrit : "Super expérience, Bobby est au top, je recommande !" Montre l'importance de remercier aussi les avis positifs.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Ma réponse à l'avis positif..."></div>
+        </ol>
+      </div>
+      <div><div class="block-label ann">🟣 Annexe A2 – Réponse au commentaire négatif</div>
+        <div class="ann-box">
+          <div class="ann-title">Annexe A2 – Réponse à rédiger sous le commentaire</div>
+          <p style="font-size:.82rem;color:var(--muted);margin-bottom:12px;">Commentaire reçu : <em>"Bof le trait est pas net, j'aurais pas confiance pour me faire tatouer par quelqu'un d'aussi peu expérimenté."</em></p>
+          <div class="editable" contenteditable="true" style="min-height:80px;" data-placeholder="Rédige ici la réponse professionnelle (80 mots max) : remercie pour le retour, apporte un élément de réponse factuel, invite à découvrir le portfolio ou à échanger en DM..."></div>
+        </div>
+      </div>
+      <div><div class="block-label auto">🔴 Autoévaluation</div>
+        <table class="ae-table">
+          <thead><tr><th>Critère</th><th class="chk-col">✅ Oui</th><th class="chk-col">⚠️ Part.</th><th class="chk-col">❌ Non</th></tr></thead>
+          <tbody>
+            <tr><td>J'ai expliqué 2 conséquences de la suppression du commentaire</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>La réponse est calme, professionnelle, sans attaque</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>J'ai proposé 2 actions proactives pertinentes</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>J'ai rédigé une réponse à l'avis positif qui fidélise</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+          </tbody>
+        </table>
+        <div class="ae-legend"><span><span class="ae-dot oui"></span>Oui</span><span><span class="ae-dot part"></span>Partiellement</span><span><span class="ae-dot non"></span>Non</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PÔLE 2 – PROSPECTION ===== -->
+<div class="section" id="pole2">
+  <div class="pole-header p2">
+    <div class="pole-big-num">02</div>
+    <div>
+      <h2>Pôle 2 – Prospection & développement clientèle</h2>
+      <p>Compétences travaillées : identifier et segmenter une cible, construire une offre d'appel, développer un réseau de partenaires locaux, organiser une action de prospection terrain.</p>
+    </div>
+  </div>
+
+  <!-- M2.1 -->
+  <div class="mission p2">
+    <div class="mission-header" onclick="tog(this)">
+      <span class="mission-num">M1</span>
+      <div><h3>Qui sont nos futurs clients ? – Cibler les prospects</h3><div class="msub">Segmentation · Persona · Fichier prospects · Ciblage</div></div>
+      <span class="mission-tag">Prospection</span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="mission-body">
+      <div><div class="block-label ctx">🟡 Contexte</div>
+        <div class="ctx-box">
+          <p>Fidji réunit Bobbytattoo et toi pour faire le point sur la clientèle :</p>
+          <div class="bubble">"Bobby a eu 8 clients ce mois-ci – tous venus par bouche-à-oreille. C'est bien, mais ça suffit pas. On doit aller chercher des clients, pas attendre qu'ils viennent. Qui sont les gens susceptibles de se faire tatouer par une jeune tatoueuse à prix accessibles ?"</div>
+          <p style="margin-top:10px;">Ta mission : construire le profil des clients cibles de Bobbytattoo et organiser une action de prospection.</p>
+        </div>
+      </div>
+      <div><div class="block-label tsk">🔵 Tes tâches</div>
+        <ol class="task-list">
+          <li><strong>Tâche 1 :</strong> Crée le <strong>persona principal</strong> de Bobbytattoo (Annexe B1) : âge, situation, motivations, freins, où il/elle traîne, ce qu'il/elle regarde sur les réseaux.</li>
+          <li><strong>Tâche 2 :</strong> Identifie <strong>3 segments de prospects</strong> différents avec pour chacun : caractéristique principale + canal pour les atteindre + argument clé.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Segment 1 : ... / Canal : ... / Argument : ... &#10;Segment 2 : ... &#10;Segment 3 : ..."></div>
+          <li><strong>Tâche 3 :</strong> Propose <strong>2 lieux de prospection terrain</strong> à Éloyes où Bobbytattoo pourrait aller se faire connaître, avec la méthode d'approche pour chacun.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Lieu 1 : ... / Méthode : ... / Lieu 2 : ... / Méthode : ..."></div>
+          <li><strong>Tâche 4 :</strong> Explique en quoi le <strong>bouche-à-oreille digital</strong> (partage de posts, tags, stories clients) est la forme de prospection la plus efficace pour un tatoueur et comment l'encourager.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Mon explication + actions concrètes pour encourager le bouche-à-oreille digital..."></div>
+        </ol>
+      </div>
+      <div><div class="block-label ann">🟣 Annexe B1 – Fiche Persona client de Bobbytattoo</div>
+        <div class="ann-box">
+          <div class="ann-title">Annexe B1 – Persona principal à compléter</div>
+          <table class="ann-table">
+            <tr><td style="width:35%"><strong>Prénom fictif du persona</strong></td><td class="editable" contenteditable="true" data-placeholder="Ex : Jade, 22 ans..."></td></tr>
+            <tr><td><strong>Âge et situation</strong></td><td class="editable" contenteditable="true" data-placeholder="Étudiant(e) / Salarié(e) / ..."></td></tr>
+            <tr><td><strong>Motivations pour se tatouer</strong></td><td class="editable" contenteditable="true" data-placeholder="Ex : exprimer sa personnalité / commémorer un souvenir / ..."></td></tr>
+            <tr><td><strong>Freins principaux</strong></td><td class="editable" contenteditable="true" data-placeholder="Ex : peur de la douleur / budget / peur de regretter / ..."></td></tr>
+            <tr><td><strong>Réseaux sociaux utilisés</strong></td><td class="editable" contenteditable="true" data-placeholder="Instagram / TikTok / Pinterest / ..."></td></tr>
+            <tr><td><strong>Ce qui le/la convaincrait</strong></td><td class="editable" contenteditable="true" data-placeholder="Portfolio visible / avis clients / prix accessible / flash day / ..."></td></tr>
+            <tr><td><strong>Budget estimé pour un tattoo</strong></td><td class="editable" contenteditable="true" data-placeholder="50–100€ / 100–200€ / ..."></td></tr>
+          </table>
+        </div>
+      </div>
+      <div><div class="block-label auto">🔴 Autoévaluation</div>
+        <table class="ae-table">
+          <thead><tr><th>Critère</th><th class="chk-col">✅ Oui</th><th class="chk-col">⚠️ Part.</th><th class="chk-col">❌ Non</th></tr></thead>
+          <tbody>
+            <tr><td>Le persona est réaliste, détaillé et cohérent avec l'activité</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Les 3 segments sont distincts avec canal et argument pour chacun</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Les 2 lieux de prospection sont pertinents avec méthode d'approche</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>L'explication bouche-à-oreille digital est argumentée avec actions concrètes</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+          </tbody>
+        </table>
+        <div class="ae-legend"><span><span class="ae-dot oui"></span>Oui</span><span><span class="ae-dot part"></span>Partiellement</span><span><span class="ae-dot non"></span>Non</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- M2.2 -->
+  <div class="mission p2">
+    <div class="mission-header" onclick="tog(this)">
+      <span class="mission-num">M2</span>
+      <div><h3>Flash Day ! – Créer une offre de lancement</h3><div class="msub">Offre d'appel · Pricing · Événement · Communication</div></div>
+      <span class="mission-tag">Offre flash</span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="mission-body">
+      <div><div class="block-label ctx">🟡 Contexte</div>
+        <div class="ctx-box">
+          <p>Fidji propose une idée pour booster la notoriété de Bobbytattoo :</p>
+          <div class="bubble">"Dans le milieu du tatouage, les 'Flash Days' c'est LA méthode pour attirer de nouveaux clients. Bobby dessine 10 motifs à tarif réduit, on organise l'événement sur une journée, et on communique dessus massivement. À toi de monter l'offre."</div>
+          <p style="margin-top:10px;">Budget communication : 0€ (uniquement réseaux sociaux). Date envisagée : dans 3 semaines.</p>
+        </div>
+      </div>
+      <div><div class="block-label tsk">🔵 Tes tâches</div>
+        <ol class="task-list">
+          <li><strong>Tâche 1 :</strong> Construis le <strong>concept du Flash Day</strong> : nom de l'événement, date, horaires, nombre de places, tarif des flash (justifie le prix choisi).</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Nom : ... / Date : ... / Horaires : ... / Places : ... / Tarif : ... / Justification : ..."></div>
+          <li><strong>Tâche 2 :</strong> Rédige le <strong>post Instagram d'annonce</strong> du Flash Day. Il doit créer de l'urgence, donner toutes les infos pratiques et expliquer comment réserver.</li>
+          <div class="resp" contenteditable="true" style="min-height:80px;" data-placeholder="✏️ Mon post d'annonce Flash Day..."></div>
+          <li><strong>Tâche 3 :</strong> Crée sur Canva une <strong>affiche numérique pour le Flash Day</strong> (format story Instagram : 1080×1920px). Exporte-la en PDF et dépose-la sur ton Digipad personnel.</li>
+          <li><strong>Tâche 4 :</strong> Planifie le <strong>calendrier de communication</strong> sur les 3 semaines avant l'événement (Annexe B2).</li>
+        </ol>
+      </div>
+      <div><div class="block-label ann">🟣 Annexe B2 – Calendrier de communication Flash Day</div>
+        <div class="ann-box">
+          <div class="ann-title">Annexe B2 – Planning communication J-21 à J-0</div>
+          <table class="ann-table">
+            <tr><th>Période</th><th>Action de communication</th><th>Support / Format</th></tr>
+            <tr><td>J-21 (Semaine 1)</td><td class="editable" contenteditable="true" data-placeholder="Ex : Teaser mystère en story..."></td><td class="editable" contenteditable="true" data-placeholder="Story / Post / Reel..."></td></tr>
+            <tr><td>J-14 (Semaine 2)</td><td class="editable" contenteditable="true" data-placeholder="..."></td><td class="editable" contenteditable="true" data-placeholder="..."></td></tr>
+            <tr><td>J-7 (Semaine 3)</td><td class="editable" contenteditable="true" data-placeholder="..."></td><td class="editable" contenteditable="true" data-placeholder="..."></td></tr>
+            <tr><td>J-3</td><td class="editable" contenteditable="true" data-placeholder="Rappel + dernières places..."></td><td class="editable" contenteditable="true" data-placeholder="..."></td></tr>
+            <tr><td>J-0 (Jour J)</td><td class="editable" contenteditable="true" data-placeholder="Stories en direct / Remerciements..."></td><td class="editable" contenteditable="true" data-placeholder="..."></td></tr>
+          </table>
+        </div>
+      </div>
+      <div><div class="block-label auto">🔴 Autoévaluation</div>
+        <table class="ae-table">
+          <thead><tr><th>Critère</th><th class="chk-col">✅ Oui</th><th class="chk-col">⚠️ Part.</th><th class="chk-col">❌ Non</th></tr></thead>
+          <tbody>
+            <tr><td>Le concept Flash Day est complet et le prix justifié</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Le post d'annonce crée de l'urgence et donne toutes les infos</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>L'affiche Canva est déposée sur le Digipad personnel en PDF</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Le calendrier est complet avec 5 actions différentes</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+          </tbody>
+        </table>
+        <div class="ae-legend"><span><span class="ae-dot oui"></span>Oui</span><span><span class="ae-dot part"></span>Partiellement</span><span><span class="ae-dot non"></span>Non</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- M2.3 -->
+  <div class="mission p2">
+    <div class="mission-header" onclick="tog(this)">
+      <span class="mission-num">M3</span>
+      <div><h3>Ensemble on va plus loin – Partenariat local</h3><div class="msub">Partenariat · Négociation · Proposition commerciale · Mail pro</div></div>
+      <span class="mission-tag">Partenariat</span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="mission-body">
+      <div><div class="block-label ctx">🟡 Contexte</div>
+        <div class="ctx-box">
+          <p>Fidji a une idée pour élargir la visibilité du shop :</p>
+          <div class="bubble">"Il y a une boutique de vêtements streetwear à Éloyes – 'Urban Spot' – qui a la même clientèle que nous. On pourrait leur proposer un partenariat : on affiche nos cartes chez eux, ils affichent les leurs ici. Et peut-être co-organiser un événement."</div>
+          <p style="margin-top:10px;">Bobbytattoo te regarde : <em>"C'est toi qui gères le contact, moi les négos c'est pas mon truc."</em></p>
+        </div>
+      </div>
+      <div><div class="block-label tsk">🔵 Tes tâches</div>
+        <ol class="task-list">
+          <li><strong>Tâche 1 :</strong> Identifie <strong>3 arguments</strong> pour convaincre Urban Spot que ce partenariat est dans leur intérêt aussi.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Argument 1 : ... / Argument 2 : ... / Argument 3 : ..."></div>
+          <li><strong>Tâche 2 :</strong> Rédige le <strong>mail de prise de contact professionnel</strong> à envoyer au gérant d'Urban Spot (Annexe B3).</li>
+          <li><strong>Tâche 3 :</strong> Propose le contenu d'une <strong>carte de visite professionnelle</strong> pour Bobbytattoo à laisser dans les commerces partenaires (informations, style visuel, QR code).</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Recto carte : ... / Verso carte : ... / Infos à faire figurer : ..."></div>
+          <li><strong>Tâche 4 :</strong> Imagine <strong>2 autres partenaires locaux pertinents</strong> pour Tattoo Dolly Skull à Éloyes et justifie chaque choix.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Partenaire 1 : ... / Justification : ... / Partenaire 2 : ... / Justification : ..."></div>
+        </ol>
+      </div>
+      <div><div class="block-label ann">🟣 Annexe B3 – Mail de partenariat à Urban Spot</div>
+        <div class="ann-box">
+          <div class="ann-title">Annexe B3 – Mail professionnel à rédiger</div>
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:14px 18px;margin-bottom:12px;">
+            <div style="display:flex;gap:10px;margin-bottom:6px;font-size:.84rem;"><span style="color:var(--muted);min-width:50px;">De :</span><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a6c5c9c8d2c7c5d2e6d2c7d2d2c9c9c2c9cacadfd5cdd3caca88c0d4">[email&#160;protected]</a></span></div>
+            <div style="display:flex;gap:10px;margin-bottom:6px;font-size:.84rem;"><span style="color:var(--muted);min-width:50px;">À :</span><span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6a1f18080b04191a051e440f1a03040b062a0d070b030644090507">[email&#160;protected]</a></span></div>
+            <div style="display:flex;gap:10px;margin-bottom:6px;font-size:.84rem;"><span style="color:var(--muted);min-width:50px;">Objet :</span><div class="editable" style="flex:1;" contenteditable="true" data-placeholder="Proposition de partenariat – Tattoo Dolly Skull..."></div></div>
+          </div>
+          <div class="editable" contenteditable="true" style="min-height:130px;" data-placeholder="Rédige le mail complet : formule d'ouverture, présentation du shop, proposition de partenariat, avantages mutuels, proposition de RDV, formule de politesse, signature..."></div>
+        </div>
+      </div>
+      <div><div class="block-label auto">🔴 Autoévaluation</div>
+        <table class="ae-table">
+          <thead><tr><th>Critère</th><th class="chk-col">✅ Oui</th><th class="chk-col">⚠️ Part.</th><th class="chk-col">❌ Non</th></tr></thead>
+          <tbody>
+            <tr><td>Les 3 arguments sont centrés sur l'intérêt d'Urban Spot (pas seulement le nôtre)</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Le mail est professionnel, structuré et contient une proposition de RDV</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>La carte de visite est complète (recto/verso) avec QR code mentionné</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Les 2 autres partenaires sont pertinents et bien justifiés</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+          </tbody>
+        </table>
+        <div class="ae-legend"><span><span class="ae-dot oui"></span>Oui</span><span><span class="ae-dot part"></span>Partiellement</span><span><span class="ae-dot non"></span>Non</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PÔLE 3 – VENTE & CONSEIL ===== -->
+<div class="section" id="pole3">
+  <div class="pole-header p3">
+    <div class="pole-big-num">03</div>
+    <div>
+      <h2>Pôle 3 – Vente & conseil client</h2>
+      <p>Compétences travaillées : accueillir et rassurer un client primo-tatoueur, construire et présenter un devis, traiter les objections, accompagner un client indécis vers une décision éclairée.</p>
+    </div>
+  </div>
+
+  <!-- M3.1 -->
+  <div class="mission p3">
+    <div class="mission-header" onclick="tog(this)">
+      <span class="mission-num">M1</span>
+      <div><h3>Mon premier tatouage – Accueillir un primo-tatoueur</h3><div class="msub">Accueil · Écoute active · Réassurance · Découverte besoin</div></div>
+      <span class="mission-tag">Premier RDV</span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="mission-body">
+      <div><div class="block-label ctx">🟡 Contexte</div>
+        <div class="ctx-box">
+          <p>Léa, 19 ans, pousse la porte du shop. Elle semble intimidée. C'est sa première visite dans un shop de tatouage. Elle dit tout bas :</p>
+          <div class="bubble client">"Bonjour... je voulais juste me renseigner pour un tatouage. C'est pour moi. C'est mon premier. J'ai un peu peur de la douleur... et je sais pas trop ce que je veux encore."</div>
+          <p style="margin-top:10px;">Bobbytattoo est occupée avec un client. C'est toi qui accueilles Léa et démarres la consultation.</p>
+        </div>
+      </div>
+      <div><div class="block-label tsk">🔵 Tes tâches</div>
+        <ol class="task-list">
+          <li><strong>Tâche 1 :</strong> Accueille Léa avec une <strong>formule chaleureuse et rassurante</strong> adaptée à quelqu'un d'intimidé. Propose-lui de s'asseoir et de regarder le portfolio.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Ma formule d'accueil pour Léa..."></div>
+          <li><strong>Tâche 2 :</strong> Pose-lui <strong>4 questions de découverte du besoin</strong> pour identifier : où elle veut le tatouage, quelle taille, quel style, pour quelle occasion.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Question 1 : ... / Q2 : ... / Q3 : ... / Q4 : ..."></div>
+          <li><strong>Tâche 3 :</strong> Léa a peur de la douleur. Réponds-lui avec <strong>2 arguments rassurants factuels</strong> (sans mentir ni minimiser).</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Argument rassurant 1 : ... / Argument 2 : ..."></div>
+          <li><strong>Tâche 4 :</strong> Complète l'annexe C1 – Fiche de consultation client avec les informations recueillies lors de l'échange avec Léa.</li>
+          <li><strong>Tâche 5 :</strong> Conclus l'entretien en proposant à Léa de <strong>prendre RDV pour une consultation gratuite</strong> avec Bobbytattoo. Donne la formule exacte.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Ma formule de conclusion et proposition de RDV..."></div>
+        </ol>
+      </div>
+      <div><div class="block-label ann">🟣 Annexe C1 – Fiche de consultation client</div>
+        <div class="ann-box">
+          <div class="ann-title">Annexe C1 – Fiche à compléter avec Léa</div>
+          <table class="ann-table">
+            <tr><td style="width:35%"><strong>Prénom du client</strong></td><td class="editable" contenteditable="true" data-placeholder="Léa"></td></tr>
+            <tr><td><strong>Âge (majorité vérifiée)</strong></td><td class="editable" contenteditable="true" data-placeholder="19 ans – majeure ✅"></td></tr>
+            <tr><td><strong>Emplacement souhaité</strong></td><td class="editable" contenteditable="true" data-placeholder="..."></td></tr>
+            <tr><td><strong>Taille approximative</strong></td><td class="editable" contenteditable="true" data-placeholder="Petit (< 5cm) / Moyen / Grand..."></td></tr>
+            <tr><td><strong>Style envisagé</strong></td><td class="editable" contenteditable="true" data-placeholder="Minimaliste / Blackwork / Couleur / Mandala / ..."></td></tr>
+            <tr><td><strong>Inspiration / référence</strong></td><td class="editable" contenteditable="true" data-placeholder="Photo apportée / Pinterest / Flash du shop / ..."></td></tr>
+            <tr><td><strong>Budget estimé</strong></td><td class="editable" contenteditable="true" data-placeholder="...€"></td></tr>
+            <tr><td><strong>Freins identifiés</strong></td><td class="editable" contenteditable="true" data-placeholder="Peur douleur / Budget / Indécision motif / ..."></td></tr>
+            <tr><td><strong>RDV consultation proposé</strong></td><td class="editable" contenteditable="true" data-placeholder="Oui – date : ... / Non"></td></tr>
+          </table>
+        </div>
+      </div>
+      <div><div class="block-label auto">🔴 Autoévaluation</div>
+        <table class="ae-table">
+          <thead><tr><th>Critère</th><th class="chk-col">✅ Oui</th><th class="chk-col">⚠️ Part.</th><th class="chk-col">❌ Non</th></tr></thead>
+          <tbody>
+            <tr><td>Ma formule d'accueil est chaleureuse et adaptée à une personne intimidée</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Les 4 questions couvrent : emplacement, taille, style, occasion</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Les 2 arguments sur la douleur sont rassurants et factuels (sans mentir)</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>La fiche de consultation est complète</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>J'ai conclu en proposant un RDV consultation gratuite</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+          </tbody>
+        </table>
+        <div class="ae-legend"><span><span class="ae-dot oui"></span>Oui</span><span><span class="ae-dot part"></span>Partiellement</span><span><span class="ae-dot non"></span>Non</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- M3.2 -->
+  <div class="mission p3">
+    <div class="mission-header" onclick="tog(this)">
+      <span class="mission-num">M2</span>
+      <div><h3>Combien ça coûte ? – Présenter un devis et négocier</h3><div class="msub">Devis · Argumentation prix · Négociation · Valeur perçue</div></div>
+      <span class="mission-tag">Devis</span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="mission-body">
+      <div><div class="block-label ctx">🟡 Contexte</div>
+        <div class="ctx-box">
+          <p>Romain, 24 ans, veut un tatouage manchette (bras complet) en style blackwork. Bobbytattoo estime le travail à <strong>6 séances de 3h à 80€/h</strong>. Elle te demande de lui présenter le devis.</p>
+          <div class="bubble client">"Wow... 1440€ au total ? C'est vraiment beaucoup. J'avais pensé à 800€ max. Y'a pas moyen de s'arranger ?"</div>
+          <p style="margin-top:10px;">Fidji te dit à l'oreille : <em>"On ne baisse pas le tarif horaire. Mais on peut proposer un échelonnement ou une réduction si il réserve toutes les séances maintenant."</em></p>
+        </div>
+      </div>
+      <div><div class="block-label tsk">🔵 Tes tâches</div>
+        <ol class="task-list">
+          <li><strong>Tâche 1 :</strong> Vérifie le calcul du devis : <strong>6 séances × 3h × 80€/h</strong>. Présente-le de façon claire et détaillée à Romain (Annexe C2).</li>
+          <li><strong>Tâche 2 :</strong> Romain dit que c'est trop cher. Donne <strong>3 arguments pour défendre la valeur</strong> du travail sans baisser le tarif horaire.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Argument 1 (durabilité) : ... / Argument 2 (savoir-faire) : ... / Argument 3 (unicité) : ..."></div>
+          <li><strong>Tâche 3 :</strong> Propose <strong>2 solutions de compromis acceptables</strong> selon les consignes de Fidji. Formule-les clairement à Romain.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Compromis 1 : ... / Compromis 2 : ..."></div>
+          <li><strong>Tâche 4 :</strong> Romain accepte l'échelonnement. Explique ce que doit contenir le devis signé pour être valide commercialement.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Éléments obligatoires du devis signé : ..."></div>
+        </ol>
+      </div>
+      <div><div class="block-label ann">🟣 Annexe C2 – Devis tatouage manchette Romain</div>
+        <div class="ann-box">
+          <div class="ann-title">Annexe C2 – Devis à compléter et présenter</div>
+          <table class="ann-table">
+            <tr><th>Élément</th><th>Détail</th><th>Montant</th></tr>
+            <tr><td>Nombre de séances</td><td class="editable" contenteditable="true" data-placeholder="..."></td><td class="editable" contenteditable="true" data-placeholder="..."></td></tr>
+            <tr><td>Durée par séance</td><td class="editable" contenteditable="true" data-placeholder="... heures"></td><td class="editable" contenteditable="true" data-placeholder="...€/h"></td></tr>
+            <tr><td>Tarif horaire Bobbytattoo</td><td class="editable" contenteditable="true" data-placeholder="...€/heure"></td><td class="editable" contenteditable="true" data-placeholder="–"></td></tr>
+            <tr><td>Coût par séance</td><td class="editable" contenteditable="true" data-placeholder="... h × ...€"></td><td class="editable" contenteditable="true" data-placeholder="...€"></td></tr>
+            <tr><td><strong>TOTAL DEVIS</strong></td><td class="editable" contenteditable="true" data-placeholder="... séances × ...€"></td><td class="editable" contenteditable="true" data-placeholder="...€"></td></tr>
+            <tr><td>Option échelonnement</td><td class="editable" contenteditable="true" data-placeholder="Paiement séance par séance / Acompte ...% / ..."></td><td class="editable" contenteditable="true" data-placeholder="...€ par séance"></td></tr>
+          </table>
+        </div>
+      </div>
+      <div><div class="block-label auto">🔴 Autoévaluation</div>
+        <table class="ae-table">
+          <thead><tr><th>Critère</th><th class="chk-col">✅ Oui</th><th class="chk-col">⚠️ Part.</th><th class="chk-col">❌ Non</th></tr></thead>
+          <tbody>
+            <tr><td>Le calcul du devis est exact (1440€) et présenté clairement</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Les 3 arguments défendent la valeur sans baisser le tarif horaire</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Les 2 compromis respectent les consignes de Fidji</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>J'ai cité les éléments obligatoires d'un devis valide</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+          </tbody>
+        </table>
+        <div class="ae-legend"><span><span class="ae-dot oui"></span>Oui</span><span><span class="ae-dot part"></span>Partiellement</span><span><span class="ae-dot non"></span>Non</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- M3.3 -->
+  <div class="mission p3">
+    <div class="mission-header" onclick="tog(this)">
+      <span class="mission-num">M3</span>
+      <div><h3>Je sais pas quoi choisir – Accompagner un client indécis</h3><div class="msub">Écoute active · Reformulation · Conseil · Closing doux</div></div>
+      <span class="mission-tag">Indécision</span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="mission-body">
+      <div><div class="block-label ctx">🟡 Contexte</div>
+        <div class="ctx-box">
+          <p>Sofia, 22 ans, est au shop depuis 40 minutes. Elle a regardé tout le portfolio, montré 15 références Pinterest... et ne sait toujours pas quoi choisir. Elle hésite entre un mandala sur la nuque et un flash lune sur le poignet.</p>
+          <div class="bubble client">"J'aime les deux... Le mandala c'est plus impressionnant mais la lune c'est plus discret. Je sais vraiment pas. Qu'est-ce que vous me conseillez ?"</div>
+          <p style="margin-top:10px;">Bobbytattoo t'a glissé : <em>"Si elle repart sans décider, elle reviendra jamais. Aide-la à choisir sans la forcer."</em></p>
+        </div>
+      </div>
+      <div><div class="block-label tsk">🔵 Tes tâches</div>
+        <ol class="task-list">
+          <li><strong>Tâche 1 :</strong> Pose à Sofia <strong>3 questions de clarification</strong> pour l'aider à identifier elle-même ce qu'elle veut vraiment.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Q1 : ... / Q2 : ... / Q3 : ..."></div>
+          <li><strong>Tâche 2 :</strong> En t'appuyant sur ses réponses, <strong>reformule son besoin</strong> et fais une <strong>recommandation argumentée</strong> pour un des deux tatouages.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Reformulation : ... / Ma recommandation : ... / Arguments : ..."></div>
+          <li><strong>Tâche 3 :</strong> Sofia a encore un doute : "Et si je regrette ?" Réponds avec <strong>2 arguments rassurants</strong> sur le choix d'un tatouage et sur le process de Bobbytattoo.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Argument 1 : ... / Argument 2 : ..."></div>
+          <li><strong>Tâche 4 :</strong> Propose un <strong>closing doux</strong> : une formule pour l'aider à prendre sa décision sans la brusquer, et enchaîner sur la prise de RDV.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Ma formule de closing doux + transition vers RDV..."></div>
+        </ol>
+      </div>
+      <div><div class="block-label auto">🔴 Autoévaluation</div>
+        <table class="ae-table">
+          <thead><tr><th>Critère</th><th class="chk-col">✅ Oui</th><th class="chk-col">⚠️ Part.</th><th class="chk-col">❌ Non</th></tr></thead>
+          <tbody>
+            <tr><td>Les 3 questions aident Sofia à clarifier ses propres critères</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Ma recommandation est argumentée et basée sur ce que Sofia a dit</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Les 2 arguments contre le regret sont rassurants sans être mensongers</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Le closing est doux, non forcé et enchaîne sur la prise de RDV</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+          </tbody>
+        </table>
+        <div class="ae-legend"><span><span class="ae-dot oui"></span>Oui</span><span><span class="ae-dot part"></span>Partiellement</span><span><span class="ae-dot non"></span>Non</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PÔLE 4 – ÉCO-DROIT ===== -->
+<div class="section" id="pole4">
+  <div class="pole-header p4">
+    <div class="pole-big-num">04</div>
+    <div>
+      <h2>Pôle 4 – Éco-Droit · Hygiène & Réglementation</h2>
+      <p>Compétences travaillées : connaître et appliquer les règles d'hygiène obligatoires, maîtriser les documents contractuels (consentement, devis), comprendre le cadre juridique et fiscal de l'activité de tatoueur indépendant.</p>
+    </div>
+  </div>
+
+  <!-- M4.1 -->
+  <div class="mission p4">
+    <div class="mission-header" onclick="tog(this)">
+      <span class="mission-num">M1</span>
+      <div><h3>Propre et pro – Les règles d'hygiène obligatoires</h3><div class="msub">Hygiène · Réglementation sanitaire · Sécurité client</div></div>
+      <span class="mission-tag">Hygiène</span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="mission-body">
+      <div><div class="block-label ctx">🟡 Contexte</div>
+        <div class="ctx-box">
+          <p>Un inspecteur de la DDPP (Direction Départementale de la Protection des Populations) peut contrôler le shop à tout moment. Fidji te prévient :</p>
+          <div class="bubble">"Dans notre métier, l'hygiène c'est pas une option – c'est la loi. On perfore la peau. Si on rate quelque chose, c'est une fermeture administrative et des poursuites pénales. Bobby doit connaître les règles par cœur."</div>
+          <p style="margin-top:10px;">Tu dois préparer une <strong>fiche de procédures hygiène</strong> pour Bobbytattoo.</p>
+        </div>
+      </div>
+      <div><div class="block-label tsk">🔵 Tes tâches</div>
+        <ol class="task-list">
+          <li><strong>Tâche 1 :</strong> Liste <strong>5 règles d'hygiène obligatoires</strong> dans un shop de tatouage (matériel à usage unique, stérilisation, tenue, désinfection…) en t'appuyant sur la ressource 7.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Règle 1 : ... / R2 : ... / R3 : ... / R4 : ... / R5 : ..."></div>
+          <li><strong>Tâche 2 :</strong> Explique la règle du <strong>matériel à usage unique</strong> : qu'est-ce qui doit être systématiquement jeté après chaque client et pourquoi ?</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Matériels à usage unique : ... / Raison : ..."></div>
+          <li><strong>Tâche 3 :</strong> Complète la <strong>checklist hygiène</strong> avant séance (Annexe D1) que Bobbytattoo devra cocher pour chaque client.</li>
+          <li><strong>Tâche 4 :</strong> Un client arrive avec une infection cutanée sur la zone à tatouer. Que fait Bobbytattoo ? Justifie ta réponse sur le plan légal et sanitaire.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Décision à prendre : ... / Justification légale et sanitaire : ..."></div>
+        </ol>
+      </div>
+      <div><div class="block-label res">🟢 Ressources</div>
+        <div class="res-box">
+          <div class="res-title">⚕️ Ressource 7 – Réglementation hygiène tatouage (Arrêté du 12 déc. 2008)</div>
+          <ul>
+            <li>Matériel perforant (aiguilles, cartouches) : <strong>usage unique obligatoire</strong> – destruction dans conteneur DASRI</li>
+            <li>Plan de travail, fauteuil, accoudoirs : <strong>désinfection entre chaque client</strong></li>
+            <li>Port de <strong>gants à usage unique</strong> pendant toute la séance</li>
+            <li>Encres : pot individuel par client – jamais re-plonger une aiguille dans le pot commun</li>
+            <li><strong>Formation obligatoire</strong> en hygiène et salubrité avant toute pratique</li>
+            <li>Locaux : eau courante, savon antiseptique, poubelle DASRI réglementaire</li>
+            <li>Contre-indications absolues : infection cutanée, maladie de peau active, grossesse</li>
+          </ul>
+        </div>
+      </div>
+      <div><div class="block-label ann">🟣 Annexe D1 – Checklist hygiène avant séance</div>
+        <div class="ann-box">
+          <div class="ann-title">Annexe D1 – À cocher avant chaque client</div>
+          <table class="ann-table">
+            <tr><th>Vérification</th><th style="width:100px;text-align:center;">✅ Fait</th></tr>
+            <tr><td>Plan de travail désinfecté</td><td class="editable" style="text-align:center;" contenteditable="true" data-placeholder="✅"></td></tr>
+            <tr><td>Aiguilles neuves et à usage unique sorties de l'emballage stérile</td><td class="editable" style="text-align:center;" contenteditable="true" data-placeholder="✅"></td></tr>
+            <tr><td>Gants à usage unique disponibles et de la bonne taille</td><td class="editable" style="text-align:center;" contenteditable="true" data-placeholder="✅"></td></tr>
+            <tr><td>Encres versées dans des godets individuels</td><td class="editable" style="text-align:center;" contenteditable="true" data-placeholder="✅"></td></tr>
+            <tr><td>Zones de la peau du client vérifiées (pas d'infection)</td><td class="editable" style="text-align:center;" contenteditable="true" data-placeholder="✅"></td></tr>
+            <tr><td>Formulaire de consentement signé et vérifié (majorité)</td><td class="editable" style="text-align:center;" contenteditable="true" data-placeholder="✅"></td></tr>
+            <tr><td>Conteneur DASRI disponible et accessible</td><td class="editable" style="text-align:center;" contenteditable="true" data-placeholder="✅"></td></tr>
+            <tr><td>Fiche conseil après soin à remettre au client</td><td class="editable" style="text-align:center;" contenteditable="true" data-placeholder="✅"></td></tr>
+          </table>
+        </div>
+      </div>
+      <div><div class="block-label auto">🔴 Autoévaluation</div>
+        <table class="ae-table">
+          <thead><tr><th>Critère</th><th class="chk-col">✅ Oui</th><th class="chk-col">⚠️ Part.</th><th class="chk-col">❌ Non</th></tr></thead>
+          <tbody>
+            <tr><td>J'ai cité 5 règles d'hygiène exactes et vérifiables</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>J'ai expliqué clairement la règle du matériel à usage unique</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>La checklist est complète (8 points)</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>La décision sur le client infecté est correcte et justifiée légalement</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+          </tbody>
+        </table>
+        <div class="ae-legend"><span><span class="ae-dot oui"></span>Oui</span><span><span class="ae-dot part"></span>Partiellement</span><span><span class="ae-dot non"></span>Non</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- M4.2 -->
+  <div class="mission p4">
+    <div class="mission-header" onclick="tog(this)">
+      <span class="mission-num">M2</span>
+      <div><h3>Je signe quoi exactement ? – Contrat et consentement éclairé</h3><div class="msub">Consentement · Documents contractuels · Responsabilité · Majorité</div></div>
+      <span class="mission-tag">Contrat</span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="mission-body">
+      <div><div class="block-label ctx">🟡 Contexte</div>
+        <div class="ctx-box">
+          <p>Un jeune homme se présente au shop sans rendez-vous. Il a l'air d'avoir environ 16-17 ans.</p>
+          <div class="bubble client">"Bonjour, je veux me faire tatouer le prénom de ma petite amie sur l'avant-bras. J'ai l'argent."</div>
+          <p style="margin-top:10px;">Fidji t'a formé(e) sur ce point : <em>"Le tatouage sur mineur est interdit par la loi, peu importe l'autorisation parentale. Tu vérifies l'identité de tout client. Toujours."</em></p>
+        </div>
+      </div>
+      <div><div class="block-label tsk">🔵 Tes tâches</div>
+        <ol class="task-list">
+          <li><strong>Tâche 1 :</strong> Explique à ce jeune homme la <strong>règle légale sur la majorité</strong> avec une formule professionnelle et sans le blesser.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Ma formule pour refuser poliment et expliquer la loi..."></div>
+          <li><strong>Tâche 2 :</strong> Liste les <strong>informations obligatoires</strong> que doit contenir un formulaire de consentement éclairé avant tatouage (Annexe D2).</li>
+          <li><strong>Tâche 3 :</strong> Explique en quoi le consentement éclairé <strong>protège à la fois le client ET le tatoueur</strong> juridiquement.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Protection du client : ... / Protection du tatoueur : ..."></div>
+          <li><strong>Tâche 4 :</strong> Un client refuse de signer le formulaire de consentement. Il dit : "J'ai confiance, c'est bon." Que fais-tu ? Justifie.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Ma décision + justification légale..."></div>
+        </ol>
+      </div>
+      <div><div class="block-label ann">🟣 Annexe D2 – Formulaire de consentement éclairé</div>
+        <div class="ann-box">
+          <div class="ann-title">Annexe D2 – Éléments obligatoires du formulaire de consentement</div>
+          <table class="ann-table">
+            <tr><th>Section</th><th>Contenu à inclure</th></tr>
+            <tr><td>Identité du client</td><td class="editable" contenteditable="true" data-placeholder="Nom, prénom, date de naissance, pièce d'identité vérifiée..."></td></tr>
+            <tr><td>Description du tatouage</td><td class="editable" contenteditable="true" data-placeholder="Motif, emplacement, taille, couleurs..."></td></tr>
+            <tr><td>Informations sur les risques</td><td class="editable" contenteditable="true" data-placeholder="Risques d'allergie, infection, réaction cutanée..."></td></tr>
+            <tr><td>Contre-indications déclarées</td><td class="editable" contenteditable="true" data-placeholder="Grossesse, maladie de peau, traitement anticoagulant..."></td></tr>
+            <tr><td>Soins après tatouage</td><td class="editable" contenteditable="true" data-placeholder="Engagement du client à suivre les conseils post-séance..."></td></tr>
+            <tr><td>Consentement et signature</td><td class="editable" contenteditable="true" data-placeholder="Lu et approuvé, date, signature client + tatoueur..."></td></tr>
+          </table>
+        </div>
+      </div>
+      <div><div class="block-label auto">🔴 Autoévaluation</div>
+        <table class="ae-table">
+          <thead><tr><th>Critère</th><th class="chk-col">✅ Oui</th><th class="chk-col">⚠️ Part.</th><th class="chk-col">❌ Non</th></tr></thead>
+          <tbody>
+            <tr><td>Ma formule de refus est professionnelle, légale et non blessante</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Les 6 sections du formulaire sont complètes et pertinentes</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>J'ai expliqué la double protection (client + tatoueur) du consentement</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Ma décision sur le refus de signer est correcte et justifiée</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+          </tbody>
+        </table>
+        <div class="ae-legend"><span><span class="ae-dot oui"></span>Oui</span><span><span class="ae-dot part"></span>Partiellement</span><span><span class="ae-dot non"></span>Non</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- M4.3 -->
+  <div class="mission p4">
+    <div class="mission-header" onclick="tog(this)">
+      <span class="mission-num">M3</span>
+      <div><h3>Et côté administratif ? – Statut juridique et obligations</h3><div class="msub">Statut juridique · Auto-entrepreneur · TVA · Obligations fiscales</div></div>
+      <span class="mission-tag">Éco-Droit</span>
+      <span class="toggle-icon">▼</span>
+    </div>
+    <div class="mission-body">
+      <div><div class="block-label ctx">🟡 Contexte</div>
+        <div class="ctx-box">
+          <p>Bobbytattoo termine son apprentissage dans 6 mois. Elle envisage de s'installer à son compte. Elle pose la question à Fidji :</p>
+          <div class="bubble insta">"Je veux ouvrir mon propre shop. Mais je sais pas si je dois créer une société, être auto-entrepreneur... Et il faut quoi comme formations obligatoires ?"</div>
+          <p style="margin-top:10px;">Fidji te délègue la recherche : <em>"Prépare-lui une fiche récap sur les statuts possibles et ce qu'elle doit savoir avant de se lancer."</em></p>
+        </div>
+      </div>
+      <div><div class="block-label tsk">🔵 Tes tâches</div>
+        <ol class="task-list">
+          <li><strong>Tâche 1 :</strong> Compare <strong>2 statuts juridiques</strong> adaptés à Bobbytattoo : auto-entrepreneur (micro-entreprise) et EI (entreprise individuelle). Pour chacun : avantages, inconvénients, plafond de CA.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Auto-entrepreneur : avantages / inconvénients / plafond CA ... &#10;EI : avantages / inconvénients / ..."></div>
+          <li><strong>Tâche 2 :</strong> Cite les <strong>3 formations ou certifications obligatoires</strong> pour ouvrir légalement un shop de tatouage en France.</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ Formation 1 : ... / Formation 2 : ... / Formation 3 : ..."></div>
+          <li><strong>Tâche 3 :</strong> Complète la fiche comparative (Annexe D3) pour aider Bobbytattoo à choisir son statut.</li>
+          <li><strong>Tâche 4 :</strong> Bobbytattoo réalise un chiffre d'affaires mensuel de <strong>2 800€</strong>. Calcule son <strong>chiffre d'affaires annuel</strong> et indique si elle dépasse le plafond auto-entrepreneur pour les prestations de service (77 700€ en 2024).</li>
+          <div class="resp" contenteditable="true" data-placeholder="✏️ CA annuel = 2800 × 12 = ... / Dépassement plafond : Oui / Non / Conséquence : ..."></div>
+        </ol>
+      </div>
+      <div><div class="block-label res">🟢 Ressources</div>
+        <div class="res-box">
+          <div class="res-title">⚖️ Ressource 8 – Cadre légal tatoueur indépendant en France</div>
+          <ul>
+            <li><strong>Formation obligatoire :</strong> formation en hygiène et salubrité (14h minimum, agréée ARS)</li>
+            <li><strong>Déclaration DDPP :</strong> déclaration préalable obligatoire auprès de la Direction Départementale de la Protection des Populations</li>
+            <li><strong>Plafond auto-entrepreneur 2024</strong> (services) : 77 700€ de CA annuel</li>
+            <li><strong>Cotisations auto-entrepreneur</strong> : environ 22% du CA pour les prestations de service</li>
+            <li>Interdiction absolue de tatouer les mineurs (moins de 18 ans) – Art. L.1151-2 CSP</li>
+            <li>Local professionnel : aux normes sanitaires, déclaré, inspectable par la DDPP</li>
+          </ul>
+        </div>
+      </div>
+      <div><div class="block-label ann">🟣 Annexe D3 – Tableau comparatif des statuts juridiques</div>
+        <div class="ann-box">
+          <div class="ann-title">Annexe D3 – À compléter pour aider Bobbytattoo à choisir</div>
+          <table class="ann-table">
+            <tr><th>Critère</th><th>Auto-entrepreneur</th><th>Entreprise Individuelle (EI)</th></tr>
+            <tr><td>Plafond de CA</td><td class="editable" contenteditable="true" data-placeholder="77 700€/an (services)..."></td><td class="editable" contenteditable="true" data-placeholder="Pas de plafond..."></td></tr>
+            <tr><td>Comptabilité requise</td><td class="editable" contenteditable="true" data-placeholder="..."></td><td class="editable" contenteditable="true" data-placeholder="..."></td></tr>
+            <tr><td>Cotisations sociales</td><td class="editable" contenteditable="true" data-placeholder="~22% du CA..."></td><td class="editable" contenteditable="true" data-placeholder="..."></td></tr>
+            <tr><td>Complexité administrative</td><td class="editable" contenteditable="true" data-placeholder="Simple / Simplifiée..."></td><td class="editable" contenteditable="true" data-placeholder="..."></td></tr>
+            <tr><td>Adapté si CA &lt; 77 700€/an</td><td class="editable" contenteditable="true" data-placeholder="Oui ✅"></td><td class="editable" contenteditable="true" data-placeholder="..."></td></tr>
+            <tr><td>Recommandé pour Bobbytattoo ?</td><td class="editable" contenteditable="true" data-placeholder="Justifie ton choix..."></td><td class="editable" contenteditable="true" data-placeholder="..."></td></tr>
+          </table>
+        </div>
+      </div>
+      <div><div class="block-label auto">🔴 Autoévaluation</div>
+        <table class="ae-table">
+          <thead><tr><th>Critère</th><th class="chk-col">✅ Oui</th><th class="chk-col">⚠️ Part.</th><th class="chk-col">❌ Non</th></tr></thead>
+          <tbody>
+            <tr><td>J'ai comparé les 2 statuts avec avantages, inconvénients et plafond CA</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Les 3 formations/certifications obligatoires sont correctes</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Le tableau comparatif D3 est complet et aide à décider</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'part')">P</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+            <tr><td>Le calcul CA annuel est exact (33 600€) et la conclusion correcte (sous plafond)</td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'oui')">O</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td><td class="chk-col"><div class="chk-cell"><button class="chk-btn" onclick="chk(this,'non')">N</button></div></td></tr>
+          </tbody>
+        </table>
+        <div class="ae-legend"><span><span class="ae-dot oui"></span>Oui</span><span><span class="ae-dot part"></span>Partiellement</span><span><span class="ae-dot non"></span>Non</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- .main -->
+
+<script>
+function show(id, btn) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+function tog(header) {
+  header.parentElement.classList.toggle('open');
+}
+function chk(btn, type) {
+  btn.closest('.chk-cell').querySelectorAll('.chk-btn').forEach(b => b.classList.remove('oui','part','non'));
+  btn.classList.toggle(type);
+}
+</script>
+</body>
+</html>
